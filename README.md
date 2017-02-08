@@ -50,10 +50,10 @@ The bot has to be able to get feedback, this could be represented by changes in 
 
 ## Contributors
 
-dtoledo23
-Isaac2
-BDYLL
-nerii94
+   dtoledo23
+   Isaac2
+   BDYLL
+   nerii94
 
 ## License
 
