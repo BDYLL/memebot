@@ -1,11 +1,11 @@
-# memetor-bot
+# Memetor-bot
 Meme generator bot.
-
 
 CONTENTS OF THIS FILE
 ---------------------
    
  * Synopsis
+ * Requirements
  * Motivation
  * FAQ 
  * Installation
@@ -16,13 +16,22 @@ CONTENTS OF THIS FILE
  
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+Memetor builds memes by processing messages in natural language on FB Messenger. Memetor looks for images about the topic and then edit the image by adding a joke in it. The user has the option to censorship or block [NSFW](http://www.urbandictionary.com/define.php?term=NSFW) content, this means jokes about hitler, rape, dead childrens, racism, sexism, etc, are not included. This bot is planned to be used only with academic purposes and not to offend people.
+
+## Requirements
+   * FB Messenger
+   * Twitter
+   * Node JS
+   * Categories/Censhorship
+   * Natural Language Processing (English)
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+An approach to see how accuarate an AI can create memes by using just searching algorithms, stadistics and natural language processing.
 
 ## FAQ
+
+
 
 ## Installation
 
@@ -34,12 +43,18 @@ Depending on the size of the project, if it is small and simple enough the refer
 
 ## Tests
 
-Describe and show how to run the tests with code examples.
+The bot has to retrieve jokes about certain topic from the database.
+The bot has to look for images about certain topic.
+The bot has to add text in images.
+The bot has to be able to get feedback, this could be represented by changes in the return.
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+dtoledo23
+Isaac2
+BDYLL
+nerii94
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+
