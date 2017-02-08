@@ -22,4 +22,4 @@ app.use("/api", routes);
 const server = app.listen(config.env.port);
 const host = server.address().address;
 const port = server.address().port;
-console.log(`=> Bot running on http://${host}:${port}`);
+console.log(`=> Memetor Bot running on http://${host}:${port}`);
