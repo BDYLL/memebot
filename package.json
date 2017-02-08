@@ -1,0 +1,23 @@
+{
+  "name": "memetor-bot",
+  "version": "1.0.0",
+  "description": "Meme generator bot",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ISC-ITESM-GDA/memetor-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "meme"
+  ],
+  "author": "Diego Toledo, Diego Yañez, Isaac Alfredo, Luis Neri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ISC-ITESM-GDA/memetor-bot/issues"
+  },
+  "homepage": "https://github.com/ISC-ITESM-GDA/memetor-bot#readme"
+}
