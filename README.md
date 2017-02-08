@@ -3,17 +3,17 @@ Meme generator bot.
 
 CONTENTS OF THIS FILE
 ---------------------
-   
+
  * Synopsis
  * Requirements
  * Motivation
- * FAQ 
+ * FAQ
  * Installation
  * API Reference
  * Tests
  * Contributors
  * Licence
- 
+
 ## Synopsis
 
 Memetor builds memes by processing messages in natural language on FB Messenger. Memetor looks for images about the topic and then edit the image by adding a joke in it. The user has the option to censorship or block [NSFW](http://www.urbandictionary.com/define.php?term=NSFW) content, this means jokes about hitler, rape, dead childrens, racism, sexism, etc, are not included. This bot is planned to be used only with academic purposes and not to offend people.
@@ -31,11 +31,11 @@ An approach to see how accuarate an AI can create memes by using just searching 
 
 ## FAQ
 
-
-
 ## Installation
-
-Provide code examples and explanations of how to get the project.
+1. `git clone`
+2. `cd memetor-bot`
+3. `npm install`
+4. `node server`
 
 ## API Reference
 
@@ -56,5 +56,3 @@ The bot has to be able to get feedback, this could be represented by changes in 
   - nerii94
 
 ## License
-
-
