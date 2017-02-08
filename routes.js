@@ -4,7 +4,7 @@ const router = require("express").Router();
 
 router.route("/")
   .get( (req, res) => {
-    res.send("I am the Bot server up and running.");
+    res.send("Welcome to Memetor bot API.");
   });
 
 module.exports = router;

@@ -18,6 +18,9 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use("/api", routes);
 
+app.get("/", (req, res) => {
+  res.send("I am the Memetor Bot server up and running.");
+})
 
 const server = app.listen(config.env.port);
 const host = server.address().address;
