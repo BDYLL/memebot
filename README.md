@@ -1,8 +1,6 @@
 # Memetor-bot
 Meme generator bot.
 
-DELETE THIS
-
 CONTENTS OF THIS FILE
 ---------------------
 
