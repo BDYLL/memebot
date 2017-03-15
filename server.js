@@ -19,7 +19,7 @@ app.use(morgan('tiny'));
 app.use("/api", routes);
 
 app.get("/", (req, res) => {
-  res.send("I am the Memetor Bot server up and running. Testing CI.");
+  res.send("I am the Memetor Bot server up and running. Testing CI");
 })
 
 const server = app.listen(config.env.port);
