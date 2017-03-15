@@ -31,11 +31,17 @@ An approach to see how accuarate an AI can create memes by using just searching 
 
 ## FAQ
 
-## Installation
+## Install locally
 1. `git clone`
 2. `cd memetor-bot`
 3. `npm install`
 4. `node server`
+
+## Install and run with Docker
+1. `git clone`
+2. `cd memetor-bot`
+3. `docker build -t dtoledo23/memetor-bot .`
+4. `docker run -p 3000:3000 dtoledo23/memetor-bot`
 
 ## API Reference
 
