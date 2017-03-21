@@ -10,6 +10,10 @@ class FacebookSender {
     async sendText(text) {
         await messenger.sendTextMessage(this.user.id, text)
     }
+
+    async sendImage(imageUrl) {
+        await messenger.sendImageMessage(this.user.id, imageUrl)
+    }
 }
 
 module.exports = FacebookSender;
