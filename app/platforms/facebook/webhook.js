@@ -7,7 +7,6 @@ const messengerListener = new MessengerListener(
     process.env.FACEBOOK_VERIFICATION_TOKEN);
 
 messengerListener.on('message', async message => {
-    console.log("Received here on listener.")
     sender = new FacebookSender(message.sender);
     MemetorBot.handleMessage(message.text, sender);
 });

@@ -5,6 +5,7 @@ const Messenger = require('fb-messenger');
 // Sender interface implementation for Facebook.
 class DiscordSender extends Sender {
     constructor(client) {
+        super();
         this.client = client;
     }
 

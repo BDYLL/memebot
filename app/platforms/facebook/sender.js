@@ -5,6 +5,7 @@ const messenger = new Messenger(process.env.FACEBOOK_PAGE_TOKEN, 'REGULAR');
 // Sender interface implementation for Facebook.
 class FacebookSender extends Sender {
     constructor(user) {
+        super();
         this.user = user;
     }
 
