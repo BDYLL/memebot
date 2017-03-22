@@ -4,7 +4,7 @@ const MemetorBot = require('../../bot');
 
 const messengerListener = new MessengerListener(
     process.env.FACEBOOK_PAGE_TOKEN,
-    process.env.VERIFICATION_TOKEN);
+    process.env.FACEBOOK_VERIFICATION_TOKEN);
 
 messengerListener.on('message', async message => {
     console.log("Received here on listener.")
