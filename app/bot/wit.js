@@ -5,7 +5,7 @@ const getCategory = async (message) => {
   
   // Make Wit API call.
   const witResponse = await client.message(message, {})
-  const categories = witResponse.entities.intent || [];
+  let categories = witResponse.entities.intent || [];
 
   // Get strongest category guess.
   categories = categories.sort((a, b) => {
@@ -14,7 +14,7 @@ const getCategory = async (message) => {
 
   const category = categories.length != 0 ? 
     categories[0].value : 
-    undefined;
+    "";
 
   return category;
 }
