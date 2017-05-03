@@ -1,21 +1,18 @@
-const Sender = require('../sender');
-
-const Messenger = require('fb-messenger');
-
-// Sender interface implementation for Facebook.
-class DiscordSender extends Sender {
-    constructor(client) {
+// Sender interface implementation for Discord.
+class DiscordSender{
+    constructor(id, bot) {
         super();
-        this.client = client;
+        this.id = id;
+        this.bot = bot;
     }
 
     async sendText(text) {
-        this.client.users.get(userId).sendMessage(messageToSend);
+        this.bot.users.get(this.id).sendMessage(text);
     }
 
-    async sendImage(imageUrl) {
-        await messenger.sendImageMessage(this.user.id, imageUrl)
+    async sendImage(message,imageUrl) {
+        throw new Error('sendImage method not implemented.');
     }
 }
 
-module.exports = FacebookSender;
+module.exports = DiscordSender;
