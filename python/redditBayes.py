@@ -3,6 +3,9 @@ import argparse
 import json
 import urllib.request
 import re
+import pymongo
+
+from pymongo import MongoClient
 
 class BagOfWords(object):
     """ Implementing a bag of words, words corresponding with their frequency of usages in a "document"
@@ -239,7 +242,7 @@ for d in data3:
    print(selftext)
    print("-----------------------------")
    fileName = re.sub('[!@#$?<>:\/.,"]', '', title)
-   file = open("jokes/"+fileName+".txt","w+")
+   file = open("jokes/"+fileName,"w+")
    file.write(d['data']['title'])
    file.write(selftext)
    file.close()
@@ -265,7 +268,14 @@ for i in DClasses:
 #Test jokes imported from reddit in folder jokes/
 base = "jokes/"
 dir = os.listdir(base)
+client = MongoClient("mongodb://equipoMemetor:IsaacNeriDiegoToledo@ec2-35-160-168-53.us-west-2.compute.amazonaws.com:27017/memetor")
+db = client.memetor
+collection = db.jokes
 print("-----------------------------------")
 for file in dir:
    res = p.Probability(base + "/" + file)
-   print(file + ": " + str(res[0][0]))
+   text = open("jokes/" + file,"r").read()
+   category = str(res[0][0]).lower()
+   #print(text)
+   collection.insert_one({"joke": text, "category" : category}).inserted_id
+   #print(file + ": " + str(res[0][0]))
