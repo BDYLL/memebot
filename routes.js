@@ -1,10 +1,10 @@
-const router = require("express").Router();
+const router = require('express').Router();
 
 // Define API routes.
 
-router.route("/")
+router.route('/')
     .get((req, res) => {
-        res.send("Welcome to Memetor bot API.");
+        res.send('Welcome to Memetor bot API.');
     });
 
 module.exports = router;

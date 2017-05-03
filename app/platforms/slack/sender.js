@@ -4,7 +4,7 @@ class SlackSender {
       this.bot = bot;
 
       this.params = {
-          icon_url: "http://files.gamebanana.com/img/ico/sprays/4e68599f1e1ec.png",
+          icon_url: 'http://files.gamebanana.com/img/ico/sprays/4e68599f1e1ec.png',
       };
     }
 
@@ -13,7 +13,7 @@ class SlackSender {
     }
 
     async sendImage(imageUrl) {
-        throw new Error("sendImage method not implemented.");
+        throw new Error('sendImage method not implemented.');
     }
 }
 

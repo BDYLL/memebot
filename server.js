@@ -19,15 +19,15 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
 // API
-app.use("/api", routes);
+app.use('/api', routes);
 
-app.get("/", (req, res) => {
-    res.send("I am the Memetor Bot server up and running.");
+app.get('/', (req, res) => {
+    res.send('I am the Memetor Bot server up and running.');
 })
 
 // Platform bots
 
-app.use("/bot", botPlatforms)
+app.use('/bot', botPlatforms)
 
 const server = app.listen(config.env.port);
 const host = server.address().address;

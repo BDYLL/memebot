@@ -10,13 +10,13 @@ const bot = new SlackBot({
 
  bot.on('start', function() {
     // more information about additional params https://api.slack.com/methods/chat.postMessage 
-    console.log("Started slack bot: " + process.env.SLACK_BOT_NAME);
+    console.log('Started slack bot: ' + process.env.SLACK_BOT_NAME);
 });
 
 bot.on('message', function(message) {
     // all ingoing events https://api.slack.com/rtm 
     // we only care about user messages
-    if (message.type === "message" && message.subtype !== "bot_message") {
+    if (message.type === 'message' && message.subtype !== 'bot_message') {
       let sender = new SlackSender(message.channel, bot);
       MemetorBot.handleMessage(message.text, sender);
     }
