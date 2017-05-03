@@ -10,7 +10,7 @@ const bot = new SlackBot({
 
  bot.on('start', function() {
     // more information about additional params https://api.slack.com/methods/chat.postMessage 
-    console.log("Slack bot started");
+    console.log("Started slack bot: " + process.env.SLACK_BOT_NAME);
 });
 
 bot.on('message', function(message) {
