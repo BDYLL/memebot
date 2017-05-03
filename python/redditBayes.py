@@ -1,4 +1,8 @@
 import os
+import argparse
+import json
+import urllib.request
+import re
 
 class BagOfWords(object):
     """ Implementing a bag of words, words corresponding with their frequency of usages in a "document"
@@ -214,12 +218,37 @@ class Pool(object):
             res += (dc, intersection_ratio)
         return res
         
-## Main
-    
-    
-##### MONGODB
+#############################################################
+
+## Reddit ## 
+parser = argparse.ArgumentParser(description='Get subreddit headlines into CSV, prints on standard output')
+parser.add_argument('--subreddit', type=str, action='store', metavar='subreddit', help='Subreddit whose headlines are of interest')
+
+parsed = parser.parse_args()
+
+data_in = urllib.request.urlopen('https://www.reddit.com/r/MeanJokes/top.json'.format(parsed.subreddit)).read()
+
+data = json.loads(data_in)
+data2 = data['data']
+data3 = data2['children']
+for d in data3:
+   title = d['data']['title']
+   selftext = re.sub(u"(\u2018|\u2019)", "'", d['data']['selftext'])
+   print("-----------------------------")
+   print(d['data']['title'])
+   print(selftext)
+   print("-----------------------------")
+   fileName = re.sub('[!@#$?<>:\/.,"]', '', title)
+   file = open("jokes/"+fileName+".txt","w+")
+   file.write(d['data']['title'])
+   file.write(selftext)
+   file.close()
 
 
+#############################################################
+
+## Red Bayesiana ## 
+    
 #Creates list of categories
 base = "learn/"
 dir = os.listdir(base)
